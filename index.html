@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page to Life</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-title">Assignment: Web Pages to Life</h1>
+
+      <!-- Part 1: CSS3 Transitions and Animations -->
+      <section class="mb-8">
+        <h2 class="section-header">🎨✨ Part 1: CSS Animations</h2>
+        <p class="mb-4">
+          This section demonstrates CSS animations triggered by hover and
+          continuous keyframes. Hover over the button to see a transform
+          transition. Observe the box below for a continuous spin animation.
+        </p>
+
+        <div class="flex flex-col items-center space-y-4">
+          <button id="hover-button" class="btn-custom btn-blue">
+            Hover Over Me
+          </button>
+          <div id="spin-box" class="interactive-box spin-box">Spinning!</div>
+        </div>
+      </section>
+
+      <!-- Part 2: JavaScript Functions -->
+      <section class="mb-8">
+        <h2 class="section-header">📚✨ Part 2: JavaScript Functions</h2>
+        <p class="mb-4">
+          This section explores JavaScript functions, demonstrating scope,
+          parameters, and return values. Enter two numbers below and see the
+          result calculated by a function.
+        </p>
+
+        <div class="flex flex-col space-y-4">
+          <div class="flex space-x-4">
+            <input
+              type="number"
+              id="num1"
+              placeholder="Number 1"
+              class="input-field"
+            />
+            <input
+              type="number"
+              id="num2"
+              placeholder="Number 2"
+              class="input-field"
+            />
+          </div>
+          <button id="calculate-button" class="btn-custom btn-green">
+            Calculate Sum
+          </button>
+          <p id="result-text" class="result-text"></p>
+          <button id="scope-button" class="btn-custom btn-gray">
+            Check Scope in Console
+          </button>
+        </div>
+      </section>
+
+      <!-- Part 3: Combining CSS Animations with JavaScript -->
+      <section class="mb-8">
+        <h2 class="section-header">
+          🎨🎬 Part 3: Combining CSS with JavaScript
+        </h2>
+        <p class="mb-4">
+          This part combines the two worlds. Click the button to trigger a CSS
+          animation on a modal popup using JavaScript to add/remove a class.
+        </p>
+
+        <div class="flex justify-center">
+          <button id="show-modal-button" class="btn-custom btn-orange">
+            Show Animated Modal
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal Element -->
+    <div id="modal-container" class="modal-container">
+      <div class="modal-content">
+        <h3 class="section-header">You did it!</h3>
+        <p>This modal was animated by adding a class with JavaScript!</p>
+        <button id="close-modal-button" class="close-button">&times;</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
