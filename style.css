@@ -1,235 +1,245 @@
-        /* General body styling */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #374151;
-            margin: 0;
-            padding: 0;
-        }
+/* General body styling */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
+  color: #374151;
+  margin: 0;
+  padding: 0;
+}
 
-        /* Container for the main content */
-        .container {
-            max-width: 48rem;
-            margin: 3rem auto 0;
-            padding: 2rem;
-            background-color: #ffffff;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-        }
+/* Container for the main content */
+.container {
+  max-width: 48rem;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
 
-        /* Section header styling */
-        .section-header {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-        }
-        
-        /* Main title styling */
-        .main-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #1f2937;
-        }
+/* Section header styling */
+.section-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
 
-        /* Continuous Keyframe Animation for the spinning box */
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
+/* Main title styling */
+.main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
 
-        .spin-box {
-            animation: spin 5s linear infinite;
-        }
+/* Continuous Keyframe Animation for the spinning box */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-        /* Keyframe animation for the modal popup */
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes slideOut {
-            from {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-        }
+.spin-box {
+  animation: spin 5s linear infinite;
+}
 
-        /* Styling for the modal container */
-        .modal-container {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 50;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+/* Keyframe animation for the modal popup */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-        .modal-container.show {
-            display: flex; /* Show when the 'show' class is added */
-        }
-        
-        .modal-container.slide-in {
-            animation: slideIn 0.5s forwards;
-        }
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
 
-        .modal-container.slide-out {
-            animation: slideOut 0.5s forwards;
-        }
+/* Styling for the modal container */
+.modal-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-        /* Styling for the modal content box */
-        .modal-content {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            max-width: 24rem;
-            width: 100%;
-            position: relative;
-        }
+.modal-container.show {
+  display: flex; /* Show when the 'show' class is added */
+}
 
-        /* Custom styles for buttons to override defaults for a unique look */
-        .btn-custom {
-            padding: 0.5rem 1.5rem;
-            border-radius: 9999px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-weight: 700;
-        }
-        
-        .btn-custom:hover {
-            transform: scale(1.05);
-        }
+.modal-container.slide-in {
+  animation: slideIn 0.5s forwards;
+}
 
-        .btn-blue {
-            background-color: #3b82f6;
-            color: #ffffff;
-        }
+.modal-container.slide-out {
+  animation: slideOut 0.5s forwards;
+}
 
-        .btn-blue:hover {
-            background-color: #2563eb;
-        }
+/* Styling for the modal content box */
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 24rem;
+  width: 100%;
+  position: relative;
+}
 
-        .btn-green {
-            background-color: #22c55e;
-            color: #ffffff;
-        }
-        
-        .btn-gray {
-            background-color: #6b7280;
-            color: #ffffff;
-        }
+/* Custom styles for buttons to override defaults for a unique look */
+.btn-custom {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
 
-        .btn-orange {
-            background-color: #f97316;
-            color: #ffffff;
-        }
+.btn-custom:hover {
+  transform: scale(1.05);
+}
 
-        /* Styling for the interactive box */
-        .interactive-box {
-            width: 6rem;
-            height: 6rem;
-            background-color: #ef4444;
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.125rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
+.btn-blue {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
 
-        /* Styling for the input fields */
-        .input-field {
-            width: 50%;
-            padding: 0.5rem;
-            border: 1px solid #d1d5db;
-            border-radius: 0.5rem;
-        }
+.btn-blue:hover {
+  background-color: #2563eb;
+}
 
-        /* Styling for the result text */
-        .result-text {
-            text-align: center;
-            font-weight: 700;
-            color: #15803d;
-        }
+.btn-green {
+  background-color: #22c55e;
+  color: #ffffff;
+}
 
-        /* Styling for the close modal button */
-        .close-button {
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-            color: #6b7280;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            line-height: 1;
-        }
+.btn-gray {
+  background-color: #6b7280;
+  color: #ffffff;
+}
 
-        .close-button:hover {
-            color: #1f2937;
-        }
+.btn-orange {
+  background-color: #f97316;
+  color: #ffffff;
+}
 
-        /* Flex and spacing utilities */
-        .flex {
-            display: flex;
-        }
+/* Styling for the interactive box */
+.interactive-box {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ef4444;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-        .flex-col {
-            flex-direction: column;
-        }
-        
-        .items-center {
-            align-items: center;
-        }
+/* Styling for the input fields */
+.input-field {
+  width: 50%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
 
-        .justify-center {
-            justify-content: center;
-        }
+/* Styling for the result text */
+.result-text {
+  text-align: center;
+  font-weight: 700;
+  color: #15803d;
+}
 
-        .space-y-4 > * + * {
-            margin-top: 1rem;
-        }
+/* Styling for the close modal button */
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #6b7280;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
 
-        .space-x-4 > * + * {
-            margin-left: 1rem;
-        }
+.close-button:hover {
+  color: #1f2937;
+}
 
-        /* General margins for sections and paragraphs */
-        .mb-8 {
-            margin-bottom: 2rem;
-        }
+/* Flex and spacing utilities */
+.flex {
+  display: flex;
+}
 
-        .mb-4 {
-            margin-bottom: 1rem;
-        }
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+/* General margins for sections and paragraphs */
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
